@@ -1,0 +1,347 @@
+* {
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+.App {
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.linkStyle {
+  color: #555;
+  transition: color 0.3s ease;
+  list-style: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.linkStyle:hover {
+  color: #1e90ff;
+}
+
+.product-card {
+  border: none;
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.product-card:hover {
+  transform: translateY(-30px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.card-image {
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #555;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #555;
+  font-weight: 700;
+}
+
+.star-icon {
+  color: gold;
+}
+
+.btn-link {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.productCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+}
+
+.productImage {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  padding-right: 20px;
+}
+
+
+.productDetails {
+  flex-grow: 1;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.cartLink {
+  text-decoration: none;
+}
+
+.cartIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 550;
+  color: #555;
+}
+
+.title2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 550;
+  color: #555;
+}
+
+
+.desc {
+  font-weight: normal;
+  text-align: justify;
+  color: black;
+}
+
+.text {
+  font-weight: normal;
+  text-align: justify;
+  color: black;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  font-weight: 800;
+  color: #555;
+}
+
+.prodStatus {
+  color: green;
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.heading1,
+.heading2 { 
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 550;
+  color: #555;
+
+}
+
+.success-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin-top: 175px;
+  width: 80%;
+  margin: auto;
+  margin-top: 180px;
+}
+
+.success-animation {
+  margin-top: 30px;
+}
+
+
+@media (max-width: 576px) {
+  .success-card {
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-top: 175px !important;
+  }
+}
+
+
+.checkmark {
+  width: 200px;
+  height: 204px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  margin: 0 auto;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: black;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
+}
+
+.dashboardSummaryBox2>a {
+  color: rgb(0, 0, 0);
+  font: 300 2rem "Roboto";
+  text-align: center;
+  background-color: rgb(255, 233, 174);
+  text-decoration: none;
+  padding: 1.5rem;
+  width: 10vmax;
+  height: 10vmax;
+  margin: 2rem;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: inline-block;
+}
+
+.dashboardSummaryBox2>a:first-child {
+  background-color: rgb(255, 110, 110);
+  color: rgb(255, 255, 255);
+}
+
+.dashboardSummaryBox2>a:last-child {
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+}
+
+
+.dashboard {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: absolute;
+}
+
+.dashboardContainer {
+  border-left: 1px solid rgba(0, 0, 0, 0.13);
+  background-color: rgb(255, 255, 255);
+  padding: 3rem 0;
+}
+
+.dashboardContainer>h1 {
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
+  text-align: center;
+  width: 50%;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.dashboardSummary {
+  margin: 2rem 0;
+}
+
+.dashboardSummary>div {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.dashboardSummary>div>p {
+  background-color: rgba(70, 117, 218, 0.932);
+  color: white;
+  font: 300 1.3rem "Roboto";
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.star-icon {
+  color: #ccc;
+  /* Default color for empty stars */
+}
+
+.star-icon.filled {
+  color: gold;
+  /* Color for filled stars */
+}
+
+.background-image {
+  background-image: url("../public/images/shopping-venture-5196903.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
