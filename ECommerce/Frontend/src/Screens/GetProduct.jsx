@@ -27,14 +27,9 @@ const GetProduct = () => {
     const [toggleToast, setToggleToast] = useState(false)
     const [toastMsg, setToastMsg] = useState('')
     const [inStock, setInStock] = useState(false)
-    const [outStock, setOutStock] = useState(false)
 
     async function updateStockStatus(id) {
         const response = await axios.get(`http://localhost:4000/api/v1/updateStockStatus/${id}`)
-    }
-
-    async function updateStockStatus2(id) {
-        const response = await axios.get(`http://localhost:4000/api/v1/updateStockStatus2/${id}`)
     }
 
     async function getProduct() {
@@ -49,12 +44,8 @@ const GetProduct = () => {
 
         const response = await axios.get(`http://localhost:4000/api/v1/getProductdetails/${id}`)
         if (response) {
-            if (response.data.product.stock === 0) {
-                updateStockStatus(response.data.product._id)
-                setOutStock(true)
-            }
             if (response.data.product.stock > 0) {
-                updateStockStatus2(response.data.product._id)
+                updateStockStatus(response.data.product._id)
                 setInStock(true)
             }
             setProdDetails(response.data.product)

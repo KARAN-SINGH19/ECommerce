@@ -153,30 +153,12 @@ exports.countCategoryProduct = async (req, res) => {
     }
 }
 
-// FUNC TO UPDATE Stock Status (status update from in stock to out of stock)
+// FUNC TO UPDATE Stock Status (status update from out of stock to in stock)
 exports.updateStockStatus = async (req, res) => {
     try {
         const { id } = req.params
-        const updateStatus = await productTable.findByIdAndUpdate({ _id: id }, { $set: { status: "Out-Of-Stock" } })
+        const updateStatus = await productTable.findByIdAndUpdate({ _id: id }, { $set: { status: "In-Stock" } })
         if (updateStatus) {
-            res.status(200).json({ success: true, message: 'Status updated successfully!!' })
-        }
-        else {
-            res.status(200).json({ success: false })
-        }
-    }
-    catch (error) {
-        res.status(500).json({ success: false, error: 'Internal server error' });
-    }
-}
-
-
-// FUNC TO UPDATE Stock Status (status update from out of stock to in stock)
-exports.updateStockStatus2 = async (req, res) => {
-    try {
-        const { id } = req.params
-        const updateStatus2 = await productTable.findByIdAndUpdate({ _id: id }, { $set: { status: "In-Stock" } })
-        if (updateStatus2) {
             res.status(200).json({ success: true, message: 'Status updated successfully!!' })
         }
         else {

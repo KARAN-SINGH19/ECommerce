@@ -104,17 +104,25 @@ exports.updateStock = async (req, res) => {
     // FINDING OUT THE NEW STOCK QTY BY SUBTTACTING THE ORIGNAL STOCK FROM THE ORDERED STOCK
     const newStock = stock - orderedQty
 
+
     // UPDATING THE STOCK QTY
     const updateStockQty = await productTable.findByIdAndUpdate(productId, { stock: newStock }, { new: true, runValidators: true, useFindAndModify: false })
 
-    // UPDATING THE ORDER STATUS ()
+
+    // UPDATING THE STOCK STATUS IF THE NEW STOCK QTY IS EQUAL TO 0
+    let updateStockStatus;
+    if (newStock === 0) {
+        updateStockStatus = await productTable.findByIdAndUpdate(productId, { status: 'Out-Of-Stock' }, { new: true, runValidators: true, useFindAndModify: false })
+    }
+
+    // UPDATING THE ORDER STATUS (PROCESSING - SHIPPED)
     const updateOrderStatus = await orderTable.findOneAndUpdate(
         { _id: orderId, "orderItems.productId": productId },
         { $set: { "orderItems.$.status": "Shipped" } },
         { new: true }
     );
 
-    if (updateStockQty && updateOrderStatus) {
+    if (updateStockQty && updateOrderStatus && updateStockStatus) {
         res.status(201).json({ success: true, message: "Stock and status updated successfully", updateStockQty, updateOrderStatus });
         var transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -144,6 +152,7 @@ exports.updateStock = async (req, res) => {
     }
 
 }
+
 
 
 
