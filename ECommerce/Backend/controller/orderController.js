@@ -113,7 +113,8 @@ exports.updateStock = async (req, res) => {
     let updateStockStatus;
     if (newStock === 0) {
         updateStockStatus = await productTable.findByIdAndUpdate(productId, { status: 'Out-Of-Stock' }, { new: true, runValidators: true, useFindAndModify: false })
-    }
+    } else { }
+
 
     // UPDATING THE ORDER STATUS (PROCESSING - SHIPPED)
     const updateOrderStatus = await orderTable.findOneAndUpdate(
@@ -122,7 +123,7 @@ exports.updateStock = async (req, res) => {
         { new: true }
     );
 
-    if (updateStockQty && updateOrderStatus && updateStockStatus) {
+    if (updateStockQty && updateOrderStatus) {
         res.status(201).json({ success: true, message: "Stock and status updated successfully", updateStockQty, updateOrderStatus });
         var transporter = nodemailer.createTransport({
             service: 'gmail',

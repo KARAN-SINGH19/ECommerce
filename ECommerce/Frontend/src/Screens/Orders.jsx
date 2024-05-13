@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 const Orders = () => {
 
     const [order, setOrder] = useState([])
+    const [orderStatus, setOrderStatus] = useState()
     const navigate = useNavigate()
 
     async function getOrderDetails() {
@@ -25,7 +26,6 @@ const Orders = () => {
                 }
             })
             if (response) {
-                console.log(response)
                 setOrder(response.data.details)
             }
         } catch (error) {
@@ -64,10 +64,8 @@ const Orders = () => {
                         text: "Your order has been cancelled.",
                         icon: "success"
                     });
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 1000);
                 }
+                getOrderDetails();
             } catch (error) {
                 Swal.fire({
                     title: "Error",

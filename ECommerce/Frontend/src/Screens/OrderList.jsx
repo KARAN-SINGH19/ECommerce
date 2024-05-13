@@ -44,9 +44,6 @@ const OrderList = () => {
                         text: "Order shipped successfully!!",
                         icon: "success"
                     });
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 1000);
                 }
                 else {
                     setToggleAlert(false)
