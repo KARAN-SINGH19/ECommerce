@@ -89,34 +89,34 @@ const ShippingDetails = () => {
                             <Form>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <FloatingLabel controlId="floatingPassword" label="Address">
-                                        <Form.Control type="text" placeholder="Address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
+                                        <Form.Control id='address' type="text" placeholder="Address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
                                     </FloatingLabel>
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <FloatingLabel controlId="floatingPassword" label="City">
-                                        <Form.Control type="text" placeholder="City" value={city} onChange={(e) => { setCity(e.target.value) }} />
+                                        <Form.Control id='city' type="text" placeholder="City" value={city} onChange={(e) => { setCity(e.target.value) }} />
                                     </FloatingLabel>
                                 </Form.Group>
 
 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <FloatingLabel controlId="floatingPassword" label="State">
-                                        <Form.Control type="text" placeholder="State" value={state} onChange={(e) => { setState(e.target.value) }} />
+                                        <Form.Control id='state' type="text" placeholder="State" value={state} onChange={(e) => { setState(e.target.value) }} />
                                     </FloatingLabel>
                                 </Form.Group>
 
 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <FloatingLabel controlId="floatingPassword" label="Contact Number">
-                                        <Form.Control type="number" placeholder="Contact Number" value={phoneNo} onChange={(e) => { setPhoneNo(e.target.value) }} />
+                                        <Form.Control id='phone' type="number" placeholder="Contact Number" value={phoneNo} onChange={(e) => { setPhoneNo(e.target.value) }} />
                                     </FloatingLabel>
                                 </Form.Group>
 
 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <FloatingLabel controlId="floatingPassword" label="Pin Code">
-                                        <Form.Control type="number" placeholder="Pin Code" value={pinCode} onChange={(e) => { setPinCode(e.target.value) }} />
+                                        <Form.Control id='code' type="number" placeholder="Pin Code" value={pinCode} onChange={(e) => { setPinCode(e.target.value) }} />
                                     </FloatingLabel>
                                 </Form.Group>
 
@@ -130,7 +130,7 @@ const ShippingDetails = () => {
 
 
                             <div style={{ display: "flex", justifyContent: "center" }}>
-                                <Button style={{ width: "25%", display: "flex", justifyContent: "center" }} onClick={submitDetails} variant="primary" size="lg">
+                                <Button id='btn' style={{ width: "25%", display: "flex", justifyContent: "center" }} onClick={submitDetails} variant="primary" size="lg">
                                     Add Details
                                 </Button>
                             </div>

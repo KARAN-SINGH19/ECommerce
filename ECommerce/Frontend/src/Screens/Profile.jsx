@@ -193,13 +193,13 @@ const Profile = () => {
                             <Form style={{ marginLeft: '30px' }} onSubmit={(e) => { e.preventDefault(); updateUserDetails(); }}>
                                 <div className="input-field mt-2">
                                     <i className="fas fa-user" style={{ position: 'absolute', top: '35%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="text" placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
+                                    <Form.Control id='name' className='mt-3' type="text" placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
                                     <i className="fas fa-user" style={{ position: 'absolute', top: '35%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="text" placeholder="Age" value={age} onChange={(e) => { setAge(e.target.value) }} />
+                                    <Form.Control id='age' className='mt-3' type="text" placeholder="Age" value={age} onChange={(e) => { setAge(e.target.value) }} />
                                     <i className="fas fa-envelope" style={{ position: 'absolute', top: '38%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="email" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                                    <Form.Control id='email' className='mt-3' type="email" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                                     <div className='mt-3' style={{ display: "flex", justifyContent: "center" }}>
-                                        <Button size='lg' variant="primary" className="profile-button" type="submit">
+                                        <Button id='btn1' size='lg' variant="primary" className="profile-button" type="submit">
                                             <i className="fas fa-save"></i> Update Profile
                                         </Button>
                                     </div>
@@ -221,17 +221,17 @@ const Profile = () => {
                             <Form style={{ marginLeft: '30px' }} onSubmit={(e) => { e.preventDefault(); updateShippingDetails(); }} >
                                 <div className="input-field">
                                     <i className="fas fa-user" style={{ position: 'absolute', top: '35%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="text" placeholder="Address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
+                                    <Form.Control id='address' className='mt-3' type="text" placeholder="Address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
                                     <i className="fas fa-user" style={{ position: 'absolute', top: '35%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="text" placeholder="City" value={city} onChange={(e) => { setCity(e.target.value) }} />
+                                    <Form.Control id='city' className='mt-3' type="text" placeholder="City" value={city} onChange={(e) => { setCity(e.target.value) }} />
                                     <i className="fas fa-envelope" style={{ position: 'absolute', top: '38%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="text" placeholder="State" value={state} onChange={(e) => { setState(e.target.value) }} />
+                                    <Form.Control id='state' className='mt-3' type="text" placeholder="State" value={state} onChange={(e) => { setState(e.target.value) }} />
                                     <i className="fas fa-envelope" style={{ position: 'absolute', top: '38%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="number" placeholder="Phone Number" value={phoneNo} onChange={(e) => { setPhoneNo(e.target.value) }} />
+                                    <Form.Control id='number' className='mt-3' type="number" placeholder="Phone Number" value={phoneNo} onChange={(e) => { setPhoneNo(e.target.value) }} />
                                     <i className="fas fa-envelope" style={{ position: 'absolute', top: '38%', marginLeft: '5px', color: 'white' }}></i>
-                                    <Form.Control className='mt-3' type="number" placeholder="Pin Code" value={pinCode} onChange={(e) => { setPinCode(e.target.value) }} />
+                                    <Form.Control id='code' className='mt-3' type="number" placeholder="Pin Code" value={pinCode} onChange={(e) => { setPinCode(e.target.value) }} />
                                     <div className='mt-3' style={{ display: "flex", justifyContent: "center" }}>
-                                        <Button size='lg' variant="primary" className="profile-button" type="submit">
+                                        <Button id='btn2' size='lg' variant="primary" className="profile-button" type="submit">
                                             <i className="fas fa-save"></i> Update Details
                                         </Button>
                                     </div>

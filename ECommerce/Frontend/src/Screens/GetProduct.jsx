@@ -118,7 +118,7 @@ const GetProduct = () => {
                             <Link to={"/Cart"} className="cartLink"></Link>
                             {
                                 toggleToast === true ? (
-                                    <ToastContainer position="middle-end">
+                                    <ToastContainer position="top-center">
                                         <Toast bg='success' animation={true} onClose={closeToast}>
                                             <Toast.Header>
                                                 <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />

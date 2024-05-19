@@ -84,56 +84,56 @@ const AddProducts = () => {
                             }
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Name">
-                                    <Form.Control placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
+                                    <Form.Control id='name' placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3" onChange={handleCategoryChange}>
-                                <Form.Select>
-                                    <option>Clothing</option>
-                                    <option>Footwear</option>
-                                    <option>Console</option>
-                                    <option>Mobile</option>
-                                    <option>Laptop</option>
-                                    <option>Speakers</option>
-                                    <option>Headsets</option>
-                                    <option>Monitor</option>
-                                    <option>Gaming</option>
+                                <Form.Select id='select'>
+                                    <option id='Clothing'>Clothing</option>
+                                    <option id='Footwear'>Footwear</option>
+                                    <option id='Console'>Console</option>
+                                    <option id='Mobile'>Mobile</option>
+                                    <option id='Laptop'>Laptop</option>
+                                    <option id='Speakers'>Speakers</option>
+                                    <option id='Headsets'>Headsets</option>
+                                    <option id='Monitor'>Monitor</option>
+                                    <option id='Gaming'>Gaming</option>
                                 </Form.Select>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Status">
-                                    <Form.Control placeholder="Status" value={status} onChange={(e) => { setStatus(e.target.value) }} />
+                                    <Form.Control id='status' placeholder="Status" value={status} onChange={(e) => { setStatus(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Description">
-                                    <Form.Control as="textarea" placeholder="Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
+                                    <Form.Control id='desc' as="textarea" placeholder="Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Stock">
-                                    <Form.Control type="number" placeholder="Stock" value={stock} onChange={(e) => { setStock(e.target.value) }} />
+                                    <Form.Control id='stock' type="number" placeholder="Stock" value={stock} onChange={(e) => { setStock(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Price">
-                                    <Form.Control type="number" placeholder="Price" value={price} onChange={(e) => { setPrice(e.target.value) }} />
+                                    <Form.Control id='price' type="number" placeholder="Price" value={price} onChange={(e) => { setPrice(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <FloatingLabel controlId="floatingEmail" label="Rating">
-                                    <Form.Control placeholder="Rating" value={ratings} onChange={(e) => { setRatings(e.target.value) }} />
+                                    <Form.Control id='rating' placeholder="Rating" value={ratings} onChange={(e) => { setRatings(e.target.value) }} />
                                 </FloatingLabel>
                             </Form.Group>
 
                             <div style={{ display: 'flex', justifyContent: "center" }}>
-                                <Button style={{ width: "25%", display: "flex", justifyContent: "center" }} variant="primary" size="lg" onClick={submitDetails}>Create</Button>
+                                <Button id='btn' style={{ width: "25%", display: "flex", justifyContent: "center" }} variant="primary" size="lg" onClick={submitDetails}>Create</Button>
                             </div>
                         </Card>
                     </Col>
